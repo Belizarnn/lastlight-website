@@ -29,7 +29,7 @@ export default function HeroSection() {
       <div className="relative z-20 flex flex-col items-center w-full">
         {useLogoVideo ? (
           <motion.div
-            className="w-full mb-6 px-2 sm:px-4 max-w-[90vw] md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto"
+            className="w-full mb-6 px-2 sm:px-4 max-w-[90vw] md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}

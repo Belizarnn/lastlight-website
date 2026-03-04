@@ -147,29 +147,30 @@ export default function Navbar() {
           </div>
         </nav>
 
-        <div className="flex items-center gap-4 md:hidden">
-          <div className="flex gap-1">
+        <div className="flex items-center gap-3 md:hidden">
+          <div className="flex gap-1 rounded-lg border border-white/10 bg-white/5 p-1">
             <button
               type="button"
               onClick={() => setLanguage("tr")}
-              className={`text-xs px-2 py-1 ${language === "tr" ? "text-[#00E5FF]" : "text-gray-500"}`}
+              className={`text-xs font-heading tracking-wider px-3 py-2 rounded-md transition-colors ${language === "tr" ? "text-[#00E5FF] bg-[#00E5FF]/15" : "text-gray-500 hover:text-gray-300"}`}
             >
               TR
             </button>
             <button
               type="button"
               onClick={() => setLanguage("en")}
-              className={`text-xs px-2 py-1 ${language === "en" ? "text-[#00E5FF]" : "text-gray-500"}`}
+              className={`text-xs font-heading tracking-wider px-3 py-2 rounded-md transition-colors ${language === "en" ? "text-[#00E5FF] bg-[#00E5FF]/15" : "text-gray-500 hover:text-gray-300"}`}
             >
               EN
             </button>
           </div>
           <button
-            className="p-2 text-gray-400"
+            className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-gray-300 hover:text-white hover:border-[#00E5FF]/40 hover:bg-[#00E5FF]/10 transition-all"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span className="text-xs font-heading tracking-wider">{mobileOpen ? t.nav.close : t.nav.menu}</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -192,61 +193,76 @@ export default function Navbar() {
             <button
               type="button"
               aria-label="Kapat"
-              className="absolute inset-0 bg-black/98 backdrop-blur-xl"
+              className="absolute inset-0 bg-black/95 backdrop-blur-xl"
               onClick={() => setMobileOpen(false)}
             />
-            <motion.nav
-              className="absolute inset-0 flex flex-col items-center justify-center gap-6 pt-20 pb-24 px-6"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+            <motion.div
+              className="absolute inset-x-4 top-20 bottom-24 rounded-2xl border border-white/15 bg-black/90 backdrop-blur-xl shadow-2xl shadow-black/50 flex flex-col overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              <button
-                type="button"
-                onClick={() => setMobileOpen(false)}
-                className="absolute top-6 right-4 p-2 touch-target text-gray-400 hover:text-white"
-                aria-label="Menüyü kapat"
-              >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              {links.map((link) => (
-                <button
-                  key={link.id}
-                  type="button"
-                  onClick={() => scrollToSection(link.href)}
-                  className={`touch-target w-full max-w-xs py-4 px-6 text-center font-heading text-lg tracking-wider transition-colors rounded-lg border border-transparent ${
-                    activeSection === link.id
-                      ? "text-[#00E5FF] bg-[#00E5FF]/10 border-[#00E5FF]/30"
-                      : "text-gray-300 hover:text-[#00E5FF] hover:bg-white/5"
-                  }`}
-                >
-                  {link.name}
-                </button>
-              ))}
-              <div className="flex gap-3 mt-6 pt-6 border-t border-white/10">
+              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-white/5">
+                <span className="font-heading text-sm tracking-[0.2em] text-[#00E5FF]">{t.nav.navigation}</span>
                 <button
                   type="button"
-                  onClick={() => setLanguage("tr")}
-                  className={`touch-target px-6 py-3 rounded-lg border transition-colors ${
-                    language === "tr" ? "text-[#00E5FF] border-[#00E5FF]/50" : "text-gray-500 border-white/10 hover:text-gray-400"
-                  }`}
+                  onClick={() => setMobileOpen(false)}
+                  className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-colors touch-target"
+                  aria-label="Menüyü kapat"
                 >
-                  TR
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setLanguage("en")}
-                  className={`touch-target px-6 py-3 rounded-lg border transition-colors ${
-                    language === "en" ? "text-[#00E5FF] border-[#00E5FF]/50" : "text-gray-500 border-white/10 hover:text-gray-400"
-                  }`}
-                >
-                  EN
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
               </div>
-            </motion.nav>
+              <nav className="flex-1 overflow-y-auto py-6 px-4 space-y-2">
+                {links.map((link, i) => (
+                  <button
+                    key={link.id}
+                    type="button"
+                    onClick={() => scrollToSection(link.href)}
+                    className={`touch-target w-full flex items-center gap-4 py-4 px-5 rounded-xl text-left font-heading text-base tracking-wider transition-all ${
+                      activeSection === link.id
+                        ? "text-[#00E5FF] bg-[#00E5FF]/15 border border-[#00E5FF]/40 shadow-lg shadow-[#00E5FF]/10"
+                        : "text-gray-300 border border-transparent hover:text-[#00E5FF] hover:bg-white/5 hover:border-white/10"
+                    }`}
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 font-heading text-xs text-gray-500">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {link.name}
+                  </button>
+                ))}
+              </nav>
+              <div className="border-t border-white/10 p-4 bg-white/5">
+                <p className="text-xs text-gray-500 font-heading tracking-wider mb-3">{t.nav.language}</p>
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setLanguage("tr")}
+                    className={`flex-1 touch-target py-3 rounded-xl font-heading text-sm tracking-wider border transition-all ${
+                      language === "tr"
+                        ? "text-[#00E5FF] border-[#00E5FF]/50 bg-[#00E5FF]/10"
+                        : "text-gray-500 border-white/10 hover:text-gray-300 hover:border-white/20"
+                    }`}
+                  >
+                    Türkçe
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setLanguage("en")}
+                    className={`flex-1 touch-target py-3 rounded-xl font-heading text-sm tracking-wider border transition-all ${
+                      language === "en"
+                        ? "text-[#00E5FF] border-[#00E5FF]/50 bg-[#00E5FF]/10"
+                        : "text-gray-500 border-white/10 hover:text-gray-300 hover:border-white/20"
+                    }`}
+                  >
+                    English
+                  </button>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

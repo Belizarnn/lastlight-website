@@ -9,7 +9,7 @@ export const translations = {
       trailer: "FRAGMANI İZLE",
       scroll: "KAYDIR",
     },
-    nav: { game: "Oyun", trailer: "Fragman", screenshots: "Ekran Görüntüleri", about: "Hakkında", community: "Topluluk", contact: "İletişim" },
+    nav: { game: "Oyun", trailer: "Fragman", screenshots: "Ekran Görüntüleri", about: "Hakkında", community: "Topluluk", contact: "İletişim", menu: "MENÜ", close: "KAPAT", navigation: "NAVİGASYON", language: "DİL / LANGUAGE" },
     game: {
       flagship: "Öne Çıkan Oyun",
       wishlist: "STEAM'DE İSTEK LİSTESİ",
@@ -65,7 +65,7 @@ export const translations = {
       trailer: "WATCH TRAILER",
       scroll: "SCROLL",
     },
-    nav: { game: "Game", trailer: "Trailer", screenshots: "Screenshots", about: "About", community: "Community", contact: "Contact" },
+    nav: { game: "Game", trailer: "Trailer", screenshots: "Screenshots", about: "About", community: "Community", contact: "Contact", menu: "MENU", close: "CLOSE", navigation: "NAVIGATION", language: "LANGUAGE" },
     game: {
       flagship: "Flagship Title",
       wishlist: "WISHLIST ON STEAM",

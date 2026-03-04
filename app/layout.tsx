@@ -60,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${orbitron.variable} ${inter.variable} font-sans antialiased text-white min-h-screen`}
+        className={`${orbitron.variable} ${inter.variable} font-sans antialiased text-white min-h-screen overflow-x-hidden`}
       >
         <a
           href="#main-content"

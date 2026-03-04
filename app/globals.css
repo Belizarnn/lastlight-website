@@ -20,11 +20,15 @@
   --font-heading: var(--font-heading);
 }
 
+html {
+  overflow-x: hidden;
+}
 body {
   background: #000000;
   color: var(--foreground);
   font-family: var(--font-body), system-ui, sans-serif;
   position: relative;
+  overflow-x: hidden;
   /* Mobil safe-area desteği (çentikli ekranlar) */
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);

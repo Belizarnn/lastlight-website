@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <JsonLd />
-    <main id="main-content">
+    <main id="main-content" className="overflow-x-hidden">
       <IntroScreen />
       <Navbar />
       <HeroSection />

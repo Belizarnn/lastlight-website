@@ -6,10 +6,10 @@
 // Başlangıç intro animasyonu
 // Öncelik: 1) INTRO_VIDEO  2) INTRO_IMAGE  3) Yazı
 // Video: public/videos/Game_Studio_Logo_Intro_Generation.mp4
-export const INTRO_VIDEO = ""; // video varsa yol verin
+export const INTRO_VIDEO: string = ""; // video varsa yol verin
 
 // Logo görseli: public/intro-logo.png - Video yoksa bu kullanılır
-export const INTRO_IMAGE = "/intro-logo.png";
+export const INTRO_IMAGE: string = "/intro-logo.png";
 
 export const INTRO_CONFIG = {
   enabled: true,

@@ -20,7 +20,7 @@ export default function IntroScreen() {
     }
 
     // Video > Görsel > Yazı: Video varsa onEnded ile kapanır, yoksa timer
-    const useVideo = INTRO_VIDEO && INTRO_VIDEO.trim() !== "";
+    const useVideo = typeof INTRO_VIDEO === "string" && INTRO_VIDEO.trim() !== "";
     if (!useVideo) {
       const timer = setTimeout(() => {
         setVisible(false);
@@ -47,8 +47,8 @@ export default function IntroScreen() {
 
   if (!INTRO_CONFIG.enabled || !visible) return null;
 
-  const useIntroVideo = INTRO_VIDEO && INTRO_VIDEO.trim() !== "";
-  const useIntroImage = !useIntroVideo && INTRO_IMAGE && INTRO_IMAGE.trim() !== "";
+  const useIntroVideo = typeof INTRO_VIDEO === "string" && INTRO_VIDEO.trim() !== "";
+  const useIntroImage = !useIntroVideo && typeof INTRO_IMAGE === "string" && INTRO_IMAGE.trim() !== "";
 
   return (
     <AnimatePresence>

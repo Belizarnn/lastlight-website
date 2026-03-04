@@ -42,7 +42,7 @@ export default function TrailerSection() {
           ) : (
             <div className="absolute inset-0 bg-black flex items-center justify-center">
               <div className="text-center">
-                <p className="text-[#00E5FF] font-heading tracking-widest mb-2">
+                <p className="text-slate-400 font-heading tracking-widest mb-2">
                   TRAILER
                 </p>
                 <p className="text-gray-600 text-sm">

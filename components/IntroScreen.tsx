@@ -93,12 +93,12 @@ export default function IntroScreen() {
             <>
               <motion.span
                 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-[0.2em] text-white block"
-                style={{ textShadow: "0 0 40px rgba(0, 229, 255, 0.4)" }}
+                style={{ textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}
               >
                 LAST LIGHT
               </motion.span>
               <motion.div
-                className="mt-6 h-px w-24 mx-auto bg-[#00E5FF]/60"
+                className="mt-6 h-px w-24 mx-auto bg-white/40"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}

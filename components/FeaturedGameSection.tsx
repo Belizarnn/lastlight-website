@@ -108,7 +108,7 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
     >
       <div className="order-2 lg:order-1">
         <motion.span
-          className="text-[#00E5FF] font-heading text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-2 sm:mb-4 block"
+          className="text-slate-400 font-heading text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-2 sm:mb-4 block"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.2 }}
@@ -148,7 +148,7 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
             href={game.steamUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-[#FF003C] hover:bg-[#FF0044] text-white font-heading font-semibold tracking-widest transition-all duration-300 hover:scale-105"
+            className="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-red-700 hover:bg-red-600 text-white font-heading font-semibold tracking-widest transition-all duration-300 hover:scale-105"
           >
             {t.game.wishlist}
           </a>
@@ -217,7 +217,7 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
               type="button"
               onClick={() => scrollToSlide(i)}
               className={`w-2 h-2 rounded-full transition-all ${
-                i === currentSlide ? "bg-[#00E5FF] w-6" : "bg-white/30 hover:bg-white/50"
+                i === currentSlide ? "bg-slate-400 w-6" : "bg-white/30 hover:bg-white/50"
               }`}
               aria-label={`Slide ${i + 1}`}
             />

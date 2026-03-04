@@ -50,10 +50,10 @@ function TeamMemberCard({
           )}
         </div>
         <div className={`text-center flex-1 ${isEven ? "md:text-left" : "md:text-right"}`}>
-          <h3 className="font-heading text-2xl md:text-3xl tracking-wider mb-2 group-hover:text-[#00E5FF] transition-colors">
+          <h3 className="font-heading text-2xl md:text-3xl tracking-wider mb-2 group-hover:text-slate-400 transition-colors">
             {member.name}
           </h3>
-          <p className="text-[#00E5FF] text-base md:text-lg mb-4">{member.role}</p>
+          <p className="text-slate-400 text-base md:text-lg mb-4">{member.role}</p>
         </div>
       </a>
     </motion.div>

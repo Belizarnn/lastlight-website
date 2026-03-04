@@ -106,7 +106,7 @@ export default function Navbar() {
               onError={() => setLogoError(true)}
             />
           ) : (
-            <span className="font-heading text-xl font-bold tracking-widest hover:text-[#00E5FF] transition-colors">
+            <span className="font-heading text-xl font-bold tracking-widest hover:text-slate-400 transition-colors">
               LAST LIGHT
             </span>
           )}
@@ -119,7 +119,7 @@ export default function Navbar() {
               type="button"
               onClick={() => scrollToSection(link.href)}
               className={`text-sm transition-colors tracking-wider ${
-                activeSection === link.id ? "text-[#00E5FF]" : "text-gray-400 hover:text-[#00E5FF]"
+                activeSection === link.id ? "text-slate-400" : "text-gray-400 hover:text-slate-400"
               }`}
             >
               {link.name}
@@ -130,7 +130,7 @@ export default function Navbar() {
               type="button"
               onClick={() => setLanguage("tr")}
               className={`text-xs font-heading tracking-wider px-2 py-1 ${
-                language === "tr" ? "text-[#00E5FF]" : "text-gray-500 hover:text-gray-400"
+                language === "tr" ? "text-slate-400" : "text-gray-500 hover:text-gray-400"
               }`}
             >
               TR
@@ -139,7 +139,7 @@ export default function Navbar() {
               type="button"
               onClick={() => setLanguage("en")}
               className={`text-xs font-heading tracking-wider px-2 py-1 ${
-                language === "en" ? "text-[#00E5FF]" : "text-gray-500 hover:text-gray-400"
+                language === "en" ? "text-slate-400" : "text-gray-500 hover:text-gray-400"
               }`}
             >
               EN
@@ -152,20 +152,20 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setLanguage("tr")}
-              className={`text-xs font-heading tracking-wider px-3 py-2 rounded-md transition-colors ${language === "tr" ? "text-[#00E5FF] bg-[#00E5FF]/15" : "text-gray-500 hover:text-gray-300"}`}
+              className={`text-xs font-heading tracking-wider px-3 py-2 rounded-md transition-colors ${language === "tr" ? "text-slate-400 bg-white/10" : "text-gray-500 hover:text-gray-300"}`}
             >
               TR
             </button>
             <button
               type="button"
               onClick={() => setLanguage("en")}
-              className={`text-xs font-heading tracking-wider px-3 py-2 rounded-md transition-colors ${language === "en" ? "text-[#00E5FF] bg-[#00E5FF]/15" : "text-gray-500 hover:text-gray-300"}`}
+              className={`text-xs font-heading tracking-wider px-3 py-2 rounded-md transition-colors ${language === "en" ? "text-slate-400 bg-white/10" : "text-gray-500 hover:text-gray-300"}`}
             >
               EN
             </button>
           </div>
           <button
-            className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-gray-300 hover:text-white hover:border-[#00E5FF]/40 hover:bg-[#00E5FF]/10 transition-all"
+            className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-gray-300 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
@@ -204,7 +204,7 @@ export default function Navbar() {
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-white/5">
-                <span className="font-heading text-sm tracking-[0.2em] text-[#00E5FF]">{t.nav.navigation}</span>
+                <span className="font-heading text-sm tracking-[0.2em] text-slate-400">{t.nav.navigation}</span>
                 <button
                   type="button"
                   onClick={() => setMobileOpen(false)}
@@ -224,8 +224,8 @@ export default function Navbar() {
                     onClick={() => scrollToSection(link.href)}
                     className={`touch-target w-full flex items-center gap-4 py-4 px-5 rounded-xl text-left font-heading text-base tracking-wider transition-all ${
                       activeSection === link.id
-                        ? "text-[#00E5FF] bg-[#00E5FF]/15 border border-[#00E5FF]/40 shadow-lg shadow-[#00E5FF]/10"
-                        : "text-gray-300 border border-transparent hover:text-[#00E5FF] hover:bg-white/5 hover:border-white/10"
+                        ? "text-slate-400 bg-white/10 border border-white/20 shadow-lg shadow-black/20"
+                        : "text-gray-300 border border-transparent hover:text-slate-400 hover:bg-white/5 hover:border-white/10"
                     }`}
                   >
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 font-heading text-xs text-gray-500">
@@ -243,7 +243,7 @@ export default function Navbar() {
                     onClick={() => setLanguage("tr")}
                     className={`flex-1 touch-target py-3 rounded-xl font-heading text-sm tracking-wider border transition-all ${
                       language === "tr"
-                        ? "text-[#00E5FF] border-[#00E5FF]/50 bg-[#00E5FF]/10"
+                        ? "text-slate-400 border-white/25 bg-white/10"
                         : "text-gray-500 border-white/10 hover:text-gray-300 hover:border-white/20"
                     }`}
                   >
@@ -254,7 +254,7 @@ export default function Navbar() {
                     onClick={() => setLanguage("en")}
                     className={`flex-1 touch-target py-3 rounded-xl font-heading text-sm tracking-wider border transition-all ${
                       language === "en"
-                        ? "text-[#00E5FF] border-[#00E5FF]/50 bg-[#00E5FF]/10"
+                        ? "text-slate-400 border-white/25 bg-white/10"
                         : "text-gray-500 border-white/10 hover:text-gray-300 hover:border-white/20"
                     }`}
                   >

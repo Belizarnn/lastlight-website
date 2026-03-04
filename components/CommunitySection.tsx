@@ -57,7 +57,7 @@ export default function CommunitySection() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:border-[#00E5FF] hover:text-[#00E5FF] hover:bg-[#00E5FF]/5 transition-all duration-300 font-heading text-lg touch-target"
+              className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:border-slate-400 hover:text-slate-400 hover:bg-white/5 transition-all duration-300 font-heading text-lg touch-target"
             >
               {link.icon}
             </a>

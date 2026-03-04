@@ -47,7 +47,7 @@ export default function ContactSection() {
 
   return (
     <section className="py-20 md:py-32 px-4 md:px-6 bg-black/85 relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-[#00E5FF]/50 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
       <div className="max-w-4xl mx-auto">
         <motion.div
@@ -76,7 +76,7 @@ export default function ContactSection() {
         >
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block font-heading text-xs tracking-widest text-[#00E5FF] mb-2">
+              <label htmlFor="name" className="block font-heading text-xs tracking-widest text-slate-400 mb-2">
                 {t.contact.nameLabel}
               </label>
               <input
@@ -84,12 +84,12 @@ export default function ContactSection() {
                 id="name"
                 name="name"
                 required
-                className="w-full bg-black border border-white/10 px-4 py-3 text-white placeholder-gray-600 focus:border-[#00E5FF]/50 focus:outline-none transition-colors"
+                className="w-full bg-black border border-white/10 px-4 py-3 text-white placeholder-gray-600 focus:border-white/30 focus:outline-none transition-colors"
                 placeholder={t.contact.namePlaceholder}
               />
             </div>
             <div>
-              <label htmlFor="email" className="block font-heading text-xs tracking-widest text-[#00E5FF] mb-2">
+              <label htmlFor="email" className="block font-heading text-xs tracking-widest text-slate-400 mb-2">
                 {t.contact.emailLabel}
               </label>
               <input
@@ -97,13 +97,13 @@ export default function ContactSection() {
                 id="email"
                 name="email"
                 required
-                className="w-full bg-black border border-white/10 px-4 py-3 text-white placeholder-gray-600 focus:border-[#00E5FF]/50 focus:outline-none transition-colors"
+                className="w-full bg-black border border-white/10 px-4 py-3 text-white placeholder-gray-600 focus:border-white/30 focus:outline-none transition-colors"
                 placeholder={t.contact.emailPlaceholder}
               />
             </div>
           </div>
           <div>
-            <label htmlFor="message" className="block font-heading text-xs tracking-widest text-[#00E5FF] mb-2">
+            <label htmlFor="message" className="block font-heading text-xs tracking-widest text-slate-400 mb-2">
               {t.contact.messageLabel}
             </label>
             <textarea
@@ -111,24 +111,24 @@ export default function ContactSection() {
               name="message"
               required
               rows={5}
-              className="w-full bg-black border border-white/10 px-4 py-3 text-white placeholder-gray-600 focus:border-[#00E5FF]/50 focus:outline-none transition-colors resize-none"
+              className="w-full bg-black border border-white/10 px-4 py-3 text-white placeholder-gray-600 focus:border-white/30 focus:outline-none transition-colors resize-none"
               placeholder={t.contact.messagePlaceholder}
             />
           </div>
           {formState === "success" && (
-            <p className="text-[#00E5FF] text-sm font-heading tracking-wider">
+            <p className="text-slate-400 text-sm font-heading tracking-wider">
               {language === "tr" ? "Mesajınız iletildi. En kısa sürede dönüş yapacağız." : "Message sent. We'll get back to you soon."}
             </p>
           )}
           {formState === "error" && (
-            <p className="text-[#FF003C] text-sm font-heading tracking-wider">
+            <p className="text-red-600 text-sm font-heading tracking-wider">
               {language === "tr" ? "Bir hata oluştu. Lütfen tekrar deneyin veya e-posta ile iletişime geçin." : "Something went wrong. Please try again or contact us via email."}
             </p>
           )}
           <button
             type="submit"
             disabled={formState === "loading"}
-            className="w-full md:w-auto px-12 py-4 bg-[#FF003C] hover:bg-[#FF0044] disabled:opacity-70 disabled:cursor-not-allowed text-white font-heading font-semibold tracking-widest transition-colors touch-target"
+            className="w-full md:w-auto px-12 py-4 bg-red-700 hover:bg-red-600 disabled:opacity-70 disabled:cursor-not-allowed text-white font-heading font-semibold tracking-widest transition-colors touch-target"
           >
             {formState === "loading" ? (language === "tr" ? "Gönderiliyor..." : "Sending...") : t.contact.submit}
           </button>
@@ -145,14 +145,14 @@ export default function ContactSection() {
             href={SOCIAL_LINKS.discord}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00E5FF] hover:underline"
+            className="text-slate-400 hover:underline"
           >
             {t.contact.discordLink}
           </a>
         </motion.p>
         <motion.a
           href={`mailto:${CONTACT_EMAIL}`}
-          className="block text-center text-gray-400 hover:text-[#00E5FF] transition-colors"
+          className="block text-center text-gray-400 hover:text-slate-400 transition-colors"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: false }}

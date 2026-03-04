@@ -50,7 +50,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            style={{ textShadow: "0 0 60px rgba(0, 229, 255, 0.3)" }}
+            style={{ textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}
           >
             LAST LIGHT
           </motion.h1>
@@ -75,7 +75,7 @@ export default function HeroSection() {
             href="https://store.steampowered.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-4 min-h-[48px] flex items-center justify-center bg-[#FF003C] hover:bg-[#FF0044] text-white font-heading font-semibold tracking-widest transition-all duration-300 hover:scale-105 touch-target"
+            className="w-full sm:w-auto px-8 py-4 min-h-[48px] flex items-center justify-center bg-red-700 hover:bg-red-600 text-white font-heading font-semibold tracking-widest transition-all duration-300 hover:scale-105 touch-target"
           >
             {t.hero.wishlist}
           </a>
@@ -83,7 +83,7 @@ export default function HeroSection() {
             href="https://discord.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-4 min-h-[48px] flex items-center justify-center border border-[#00E5FF] text-[#00E5FF] hover:bg-[#00E5FF]/10 font-heading font-semibold tracking-widest transition-all duration-300 hover:scale-105 touch-target"
+            className="w-full sm:w-auto px-8 py-4 min-h-[48px] flex items-center justify-center border border-white/30 text-slate-300 hover:bg-white/5 font-heading font-semibold tracking-widest transition-all duration-300 hover:scale-105 touch-target"
           >
             {t.hero.discord}
           </a>

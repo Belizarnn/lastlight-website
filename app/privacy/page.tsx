@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <div className="max-w-3xl mx-auto">
         <Link
           href="/"
-          className="inline-block text-[#00E5FF] hover:underline font-heading text-sm tracking-wider mb-12"
+          className="inline-block text-slate-400 hover:underline font-heading text-sm tracking-wider mb-12"
         >
           ← Ana Sayfa
         </Link>
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
           <h2 className="font-heading text-xl text-white mt-8">İletişim</h2>
           <p>
             Sorularınız için:{" "}
-            <a href="mailto:hello@lastlight.studio" className="text-[#00E5FF] hover:underline">
+            <a href="mailto:hello@lastlight.studio" className="text-slate-400 hover:underline">
               hello@lastlight.studio
             </a>
           </p>

@@ -13,7 +13,7 @@ export default function PressPage() {
       <div className="max-w-4xl mx-auto">
         <Link
           href="/"
-          className="inline-block text-[#00E5FF] hover:underline font-heading text-sm tracking-wider mb-12"
+          className="inline-block text-slate-400 hover:underline font-heading text-sm tracking-wider mb-12"
         >
           ← Ana Sayfa
         </Link>
@@ -25,7 +25,7 @@ export default function PressPage() {
         </p>
 
         <section className="mb-16">
-          <h2 className="font-heading text-2xl text-[#00E5FF] tracking-wider mb-6">Last Light Hakkında</h2>
+          <h2 className="font-heading text-2xl text-slate-400 tracking-wider mb-6">Last Light Hakkında</h2>
           <p className="text-gray-300 leading-relaxed mb-4">
             Last Light, sürükleyici korku ve çok oyunculu deneyimlere odaklanan bağımsız bir oyun stüdyosudur.
             Oyuncuların iş birliği yapması, hayatta kalması ve karanlığı keşfetmesi gereken atmosferik
@@ -34,7 +34,7 @@ export default function PressPage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="font-heading text-2xl text-[#00E5FF] tracking-wider mb-6">{game.title}</h2>
+          <h2 className="font-heading text-2xl text-slate-400 tracking-wider mb-6">{game.title}</h2>
           <p className="text-gray-300 leading-relaxed mb-6">
             {game.description}
           </p>
@@ -42,17 +42,17 @@ export default function PressPage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="font-heading text-2xl text-[#00E5FF] tracking-wider mb-6">Logolar ve Görseller</h2>
+          <h2 className="font-heading text-2xl text-slate-400 tracking-wider mb-6">Logolar ve Görseller</h2>
           <p className="text-gray-500 mb-4">
             Yüksek çözünürlüklü logolar ve ekran görüntüleri için lütfen bizimle iletişime geçin.
           </p>
         </section>
 
         <section className="mb-16">
-          <h2 className="font-heading text-2xl text-[#00E5FF] tracking-wider mb-6">İletişim</h2>
+          <h2 className="font-heading text-2xl text-slate-400 tracking-wider mb-6">İletişim</h2>
           <p className="text-gray-300 mb-2">
             Basın soruları:{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-[#00E5FF] hover:underline">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-slate-400 hover:underline">
               {CONTACT_EMAIL}
             </a>
           </p>
@@ -61,7 +61,7 @@ export default function PressPage() {
               href={SOCIAL_LINKS.discord}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[#00E5FF] transition-colors"
+              className="text-gray-400 hover:text-slate-400 transition-colors"
             >
               Discord
             </a>
@@ -69,7 +69,7 @@ export default function PressPage() {
               href={SOCIAL_LINKS.steam}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[#00E5FF] transition-colors"
+              className="text-gray-400 hover:text-slate-400 transition-colors"
             >
               Steam
             </a>

@@ -12,7 +12,7 @@ export const INTRO_VIDEO: string = "/videos/Game_Studio_Logo_Intro_Generation.mp
 export const INTRO_IMAGE: string = "/intro-logo.png";
 
 export const INTRO_CONFIG = {
-  enabled: true,
+  enabled: false,
   mode: "once", // "once" | "always" - once: sadece ilk ziyarette
   duration: 2500, // görsel/yazı modunda gösterim süresi (ms)
 };

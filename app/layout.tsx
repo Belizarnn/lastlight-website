@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     description: "Independent game studio creating dark cooperative experiences like Werewolf Hunter.",
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export const viewport: Viewport = {

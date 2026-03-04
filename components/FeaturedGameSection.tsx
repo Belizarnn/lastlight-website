@@ -100,7 +100,7 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
 
   return (
     <motion.div
-      className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center"
+      className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.15 }}
@@ -108,7 +108,7 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
     >
       <div className="order-2 lg:order-1">
         <motion.span
-          className="text-[#00E5FF] font-heading text-sm tracking-[0.3em] uppercase mb-4 block"
+          className="text-[#00E5FF] font-heading text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-2 sm:mb-4 block"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.2 }}
@@ -118,7 +118,7 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
         </motion.span>
 
         <motion.h2
-          className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6"
+          className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.2 }}
@@ -128,7 +128,7 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
         </motion.h2>
 
         <motion.p
-          className="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl"
+          className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.2 }}
@@ -138,7 +138,7 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
         </motion.p>
 
         <motion.div
-          className="flex flex-wrap gap-4"
+          className="flex flex-wrap gap-3 sm:gap-4 items-center"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.2 }}
@@ -148,11 +148,11 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
             href={game.steamUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-[#FF003C] hover:bg-[#FF0044] text-white font-heading font-semibold tracking-widest transition-all duration-300 hover:scale-105"
+            className="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-[#FF003C] hover:bg-[#FF0044] text-white font-heading font-semibold tracking-widest transition-all duration-300 hover:scale-105"
           >
             {t.game.wishlist}
           </a>
-          <span className="text-gray-600 text-sm self-center">
+          <span className="text-gray-600 text-xs sm:text-sm self-center">
             {language === "tr" && "releaseInfoTr" in game ? game.releaseInfoTr : game.releaseInfo}
           </span>
         </motion.div>
@@ -245,7 +245,7 @@ function GameCard({ game }: { game: (typeof GAMES)[0] }) {
 export default function FeaturedGameSection() {
   return (
     <section id="game" className="py-20 md:py-32 px-4 md:px-6 bg-black/85 scroll-mt-20 relative">
-      <div className="max-w-7xl mx-auto space-y-20 md:space-y-32">
+      <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20 md:space-y-32">
         {GAMES.map((game) => (
           <GameCard key={game.id} game={game} />
         ))}
